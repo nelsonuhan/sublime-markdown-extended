@@ -309,7 +309,7 @@ contexts:
             3: punctuation.definition.fenced.markdown
           pop: true
         - include: scope:source.json
-    - match: '(```|{%\s*highlight)\s*(julia|jl)\s*((?:linenos\s*)?%})?$'
+    - match: '(```|~~~|{%\s*highlight)\s*(julia|jl)\s*((?:linenos\s*)?%})?$'
       captures:
         1: punctuation.definition.fenced.markdown
         2: variable.language.fenced.markdown
@@ -317,14 +317,14 @@ contexts:
       push:
         - meta_scope: markup.raw.block.markdown markup.raw.block.fenced.markdown
         - meta_content_scope: source.julia
-        - match: '(```|{%\s*endhighlight\s*%})\n'
+        - match: '(```|~~~|{%\s*endhighlight\s*%})\n'
           captures:
             1: punctuation.definition.fenced.markdown
             2: variable.language.fenced.markdown
             3: punctuation.definition.fenced.markdown
           pop: true
         - include: scope:source.julia
-    - match: '(```|{%\s*highlight)\s*(less)\s*((?:linenos\s*)?%})?$'
+    - match: '(```|~~~|{%\s*highlight)\s*(less)\s*((?:linenos\s*)?%})?$'
       captures:
         1: punctuation.definition.fenced.markdown
         2: variable.language.fenced.markdown
@@ -332,7 +332,7 @@ contexts:
       push:
         - meta_scope: markup.raw.block.markdown markup.raw.block.fenced.markdown
         - meta_content_scope: source.css.less
-        - match: '(```|{%\s*endhighlight\s*%})\n'
+        - match: '(```|~~~|{%\s*endhighlight\s*%})\n'
           captures:
             1: punctuation.definition.fenced.markdown
             2: variable.language.fenced.markdown
